@@ -1,8 +1,9 @@
 # SWE_2021_41_2024_2_week_6
 
-
 ## Week4 Assignment
 Learn abount how to use google colab and basic python such as data type, basic loops, functions, if ~ else, and file handling. 
+
+<br>
 
 ### Task 
 - Complete **isHappy** function following the description below
@@ -70,52 +71,57 @@ n = 2
 print(isHappy(n))  # Expected output: False
 ```
 
+<br>
 
 
 ---
 
 ## Week5 Assignment
-- Learn about Docker
-- Link of week5 repository
+Learn about Docker
+
+<br>
 
 ### Docker Commands and Explanation
-
 **1. Check Operating System Information Inside Container**
 ```bash
-docker exec <your container> cat /etc/os-release
+docker exec ossp-container cat /etc/os-release
 ```
 - This command shows the operating system information from inside the container by reading the /etc/os-release file.
 
 ```bash
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
 NAME="Ubuntu"
-VERSION="20.04.2 LTS (Focal Fossa)"
+VERSION_ID="24.04"
 ID=ubuntu
 ...
 ```
+<br>
 
 **2. Check Git Version**
 ```bash
-docker exec <your container> git --version
+docker exec ossp-container git --version
 ```
 - This command checks the version of Git installed inside the container.
 
 ```bash
-git version 2.25.1
+git version 2.43.0
 ```
+<br>
 
 **3. Check Python3 Version**
 ```bash
-docker exec <your container> python3 --version
+docker exec ossp-container python3 --version
 ```
 - This command checks the Python 3 version inside the container.
 
 ```bash
-Python 3.8.5
+Python 3.12.3
 ```
+<br>
 
 **4. Inspect Container Bind Mounts**
 ```bash
-docker inspect --format="{{ .HostConfig.Binds }}" <container_name>
+docker inspect --format="{{ .HostConfig.Binds }}" ossp-container
 ```
 - This command inspects the bind mounts for the container, showing how directories from the host are mapped into the container.
 
@@ -123,6 +129,11 @@ docker inspect --format="{{ .HostConfig.Binds }}" <container_name>
 [/host/path:/container/path:rw]
 ```
 
+## Docker Command Output
+
+My output for the Docker commands:
+
+![image](https://github.com/user-attachments/assets/fb315b6a-1e6a-41e0-8d3f-c52362e2643f)
 
 
 
